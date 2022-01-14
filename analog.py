@@ -7,7 +7,8 @@ import datetime
 def main():
     create_panel()
     while True:
-        wn.set_title("ANALOG CLOCK")
+        wn.set_title("ANALOG CLOCK") # Title of window
+        '''This area is clock main position '''
         wn.draw_oval(100, 100, 300, 300, color="red")
         wn.draw_string("Hours Hand : Green", 20, 60, color="Green", font=str)
         wn.draw_string("Minute Hand : Red", 20, 80, color="Red", font=str)
@@ -17,9 +18,11 @@ def main():
         wn.fill_rect(248, 395, 5, 10, color="red")
         wn.fill_rect(95, 250, 10, 5, color="red")
         wn.fill_rect(395, 250, 10, 5, color="red")
+        ''' Area is end here'''
         saniye = datetime.datetime.now().second
         dakika = datetime.datetime.now().minute
         saat = datetime.datetime.now().hour
+        #printing the digital clock on the panel
         birim = str(saat) + " : " + str(dakika) + " : " + str(saniye)
         wn.draw_string(birim, 300, 50, "white")
         #hours hand position
